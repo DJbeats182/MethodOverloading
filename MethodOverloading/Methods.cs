@@ -22,20 +22,21 @@ namespace MethodOverloading
         {
             int answer = num1 + num2;   
 
-            if (TorF)
+            if (TorF && answer > 1)
             {
-                if (answer > 1)
-                {
-                    return $"{answer} dollars";
-                }
-                else
-                {
-                    return $"{answer} dollar";
-                }
+                return $"{answer} dollars";
+            }
+            else if (TorF && answer == 1)
+            {
+                return $"{answer} dollar";
+            }
+            else if (TorF && answer < 1)
+            {
+                return $"{answer} dollars";
             }
             else
             {
-                return "";
+                return answer.ToString();
             }
         }
     }
